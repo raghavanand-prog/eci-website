@@ -1,0 +1,30 @@
+h1{
+    text-align: center;
+    color: blue;
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+h2{
+    text-align: center;
+    color: red;
+}
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%; /* Ensures responsiveness */
+}
+padding {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+p {
+    text-align: center;
+    font-size: 18px;
+    
+}padding{
+    div{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+{background-color: lightblue;}
