@@ -4,47 +4,81 @@
     <meta charset="UTF-8">
     <title>Contact ECI</title>
     <link rel="stylesheet" href="index.css">
-    <nav class="navbar">
-    <h2>ECI Portal</h2>
-
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About ECI</a></li>
-        <li><a href="process.html">Election Process</a></li>
-        <li><a href="awareness.html">Voter Awareness</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
-</nav>
-<section class="page-header">
-    <h1>Contact & Feedback</h1>
-    <p>We are here to help citizens with election-related queries</p>
-</section>
-<section class="contact">
-
-    <div class="contact-container">
-
-        <div class="contact-info">
-            <h2>Contact Information</h2>
-
-            <p><b>Email:</b> info@eci.gov.in</p>
-            <p><b>Helpline:</b> 1950</p>
-            <p><b>Address:</b> Nirvachan Sadan, New Delhi</p>
-        </div>
-
-        <div class="contact-form">
-            <h2>Feedback Form</h2>
-
-            <form>
-                <input type="text" placeholder="Your Name">
-                <input type="email" placeholder="Your Email">
-                <textarea placeholder="Your Message"></textarea>
-
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-
-    </div>
-
-</section>
 </head>
+
 <body>
+
+    <nav class="navbar">
+        <h2>ECI Portal</h2>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About ECI</a></li>
+            <li><a href="process.html">Election Process</a></li>
+            <li><a href="awareness.html">Voter Awareness</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="page-header">
+        <h1>Contact & Feedback</h1>
+        <p>We are here to help citizens with election-related queries</p>
+    </section>
+
+    <section class="contact">
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+
+                <p><b>Email:</b> info@eci.gov.in</p>
+                <p><b>Helpline:</b> 1950</p>
+                <p><b>Address:</b> Nirvachan Sadan, New Delhi</p>
+
+                <br>
+
+                <button onclick="getLocation()">Get My Location</button>
+
+                <p id="location"></p>
+            </div>
+
+            <div class="contact-form">
+                <h2>Feedback Form</h2>
+
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Election Commission of India Portal</p>
+    </footer>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                document.getElementById("location").innerHTML =
+                    "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            document.getElementById("location").innerHTML =
+                "<b>Latitude:</b> " + position.coords.latitude +
+                "<br><b>Longitude:</b> " + position.coords.longitude;
+        }
+    </script>
+
+</body>
+</html>

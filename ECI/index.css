@@ -108,10 +108,9 @@ nav ul li a{
 }
 
 .stats-container{
-    display:flex;
-    justify-content:space-between;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
     gap:20px;
-    flex-wrap:wrap;
 }
 
 .stat-box{
@@ -300,4 +299,27 @@ footer{
 
 .contact-form button:hover{
     background:#000080;
+}
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+}
+
+.modal-content{
+    background:white;
+    width:50%;
+    margin:10% auto;
+    padding:20px;
+    border-radius:10px;
+}
+
+.close{
+    float:right;
+    cursor:pointer;
+    font-size:24px;
 }
