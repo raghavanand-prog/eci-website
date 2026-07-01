@@ -95,7 +95,7 @@ if (form) {
             return;
         }
 
-        // Create object to store all voter details
+    
         const voterData = {
             name: name,
             email: email,
@@ -108,7 +108,7 @@ if (form) {
             proof: proof ? proof.name : "Not Uploaded"
         };
 
-        // Save object in Local Storage
+    
         localStorage.setItem("voterDetails", JSON.stringify(voterData));
         document.getElementById("successMessage").innerHTML = `
     <div class="success-box">
@@ -117,7 +117,6 @@ if (form) {
     </div>
 `;
 
-        // Display entered data
         const resultCard = document.getElementById("resultCard");
 
         resultCard.innerHTML = `
