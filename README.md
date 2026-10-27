@@ -1,6 +1,21 @@
-# eci-website
-The Election Commission of India website is the official portal for elections, providing voter registration, election schedules, results, and information to ensure free and fair elections in India.
-# 🗳️ Election Commission of India (ECI) Web Portal
+# ECI Web Portal (student project)
+
+**A student-built information website about the Election Commission of India, with a practice voter registration form.**
+
+Why it exists: a web development project in HTML, CSS and JavaScript. It is not the official ECI website, and the form only saves to your own browser.
+
+**Live: [raghavanand-prog.github.io/eci-website/ECI](https://raghavanand-prog.github.io/eci-website/ECI/index.html)**
+
+## Try it
+
+1. Open the live link, or open `ECI/index.html` in any browser.
+2. Browse the pages, then fill in the registration form to see validation and the confirmation card.
+
+---
+
+## Technical details
+
+Everything below is the full write-up for engineers and reviewers.
 
 ## 📌 Project Description
 
